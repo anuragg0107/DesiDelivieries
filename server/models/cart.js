@@ -1,35 +1,38 @@
 const mongoose = require("mongoose");
 
-const foodSchema = mongoose.Schema(
+const cartSchema = mongoose.Schema(
   {
     title: {
       type: String,
-      required: true,
     },
     price: {
       type: Number,
-      required: true,
     },
     image: {
       type: String,
-      required: true,
     },
     category: {
       type: String,
-      required: true,
+      required: false,
     },
     description: {
       type: String,
-      required: true,
+      required: false,
+    },
+    // quantity: {
+    //   type: String,
+    // },
+    size: {
+      type: String,
     },
   },
   {
     timestamps: true,
-    collection: "food",
+    collection: "cart",
     versionKey: false,
   }
 );
 
-const foodModel = mongoose.model("food", foodSchema);
+const cartModel = mongoose.model("cart", cartSchema);
 
-module.exports = foodModel;
+module.exports = cartModel;

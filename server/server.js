@@ -3,7 +3,8 @@ const cors = require('cors');
 const app = express();
 const dbconfig = require('./data');
 const userRoutes = require('./routes/userRoutes.js');
-const foodRoutes = require('./routes/foodRoutes.js')
+const foodRoutes = require('./routes/foodRoutes.js');
+const cartRoutes = require('./routes/cartRoute.js');
 // const session = require('express-session');
 // const passport = require('passport');
 // const OAuth2Strategy = require("passport-google-oauth2").Strategy;
@@ -15,6 +16,7 @@ app.use(cors());
 app.use(express.json());  
 app.use("/api/users",userRoutes);
 app.use("/api/food",foodRoutes);
+app.use("/api/cart",cartRoutes);
 // app.use(session({
 //     secret :"9754388825",
 //     resave : false,
