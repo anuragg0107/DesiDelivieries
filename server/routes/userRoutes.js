@@ -130,12 +130,12 @@ router.post("/sendpasslink", async (req, res) => {
         from: "anurag.gupta199418@gmail.com",
         to: email,
         subject: "Reset password link",
-        text: `This link will expire within 2 minutes. Click the link to reset your password: http://localhost:3000/forgotpassword/${userFind.id}/${setUserToken.verifytoken}`,
+        text: `This link will expire within 2 minutes. Click the link to reset your password: https://desi-deliveries-frontend.vercel.app/forgotpassword/${userFind.id}/${setUserToken.verifytoken}`,
         html: `<p style="text-align: center;">This link will expire within 2 minutes. Click the link
-        <a href="http://localhost:3000/forgotpassword/${userFind.id}/${setUserToken.verifytoken}"> Reset Password </a>
+        <a href="https://desi-deliveries-frontend.vercel.app/forgotpassword/${userFind.id}/${setUserToken.verifytoken}"> Reset Password </a>
          to reset your password:</p>
                <div style="text-align: center;">
-                 <a href="http://localhost:3000/forgotpassword/${userFind.id}/${setUserToken.verifytoken}">
+                 <a href="https://desi-deliveries-frontend.vercel.app/forgotpassword/${userFind.id}/${setUserToken.verifytoken}">
                    <img src="https://assets-v2.lottiefiles.com/a/4a774176-1171-11ee-ae48-bf87d1dea7a3/FzdIgU4ZSq.gif" alt="Forgot Password" />
                  </a>
                </div>`,
